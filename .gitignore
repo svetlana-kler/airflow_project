@@ -1,1 +1,7 @@
 data
+plugins
+logs
+webserver_config.py
+.env
+airflow.cfg
+airflow-webserver.pid
