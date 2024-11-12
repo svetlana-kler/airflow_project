@@ -1,0 +1,31 @@
+[2024-11-07T12:36:35.392+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-11-07T12:36:35.447+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: car_price_prediction.test_task manual__2024-11-07T12:34:41.423801+00:00 [queued]>
+[2024-11-07T12:36:35.466+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: car_price_prediction.test_task manual__2024-11-07T12:34:41.423801+00:00 [queued]>
+[2024-11-07T12:36:35.469+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2024-11-07T12:36:35.503+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): test_task> on 2024-11-07 12:34:41.423801+00:00
+[2024-11-07T12:36:35.526+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=544) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-11-07T12:36:35.530+0000] {standard_task_runner.py:72} INFO - Started process 579 to run task
+[2024-11-07T12:36:35.532+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'car_price_prediction', 'test_task', 'manual__2024-11-07T12:34:41.423801+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/hw_dag.py', '--cfg-path', '/tmp/tmp_engk6e8']
+[2024-11-07T12:36:35.535+0000] {standard_task_runner.py:105} INFO - Job 5: Subtask test_task
+[2024-11-07T12:36:35.641+0000] {task_command.py:467} INFO - Running <TaskInstance: car_price_prediction.test_task manual__2024-11-07T12:34:41.423801+00:00 [running]> on host 11485420fd93
+[2024-11-07T12:36:36.058+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='car_price_prediction' AIRFLOW_CTX_TASK_ID='test_task' AIRFLOW_CTX_EXECUTION_DATE='2024-11-07T12:34:41.423801+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-07T12:34:41.423801+00:00'
+[2024-11-07T12:36:36.065+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-11-07T12:36:36.067+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-11-07T12:36:36.070+0000] {logging_mixin.py:190} INFO - Current task name:test_task state:running start_date:2024-11-07 12:36:35.448675+00:00
+[2024-11-07T12:36:36.072+0000] {logging_mixin.py:190} INFO - Dag name:car_price_prediction and current dag run status:running
+[2024-11-07T12:36:36.074+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-11-07T12:36:36.079+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-11-07T12:36:36.601+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'echo "Here we go!"']
+[2024-11-07T12:36:36.647+0000] {subprocess.py:86} INFO - Output:
+[2024-11-07T12:36:36.658+0000] {subprocess.py:93} INFO - Here we go!
+[2024-11-07T12:36:36.659+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-11-07T12:36:37.627+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-11-07T12:36:37.629+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=car_price_prediction, task_id=test_task, run_id=manual__2024-11-07T12:34:41.423801+00:00, execution_date=20241107T123441, start_date=20241107T123635, end_date=20241107T123637
+[2024-11-07T12:36:37.665+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2024-11-07T12:36:37.667+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2024-11-07T12:36:37.669+0000] {logging_mixin.py:190} INFO - Dag name:car_price_prediction queued_at:2024-11-07 12:34:41.660057+00:00
+[2024-11-07T12:36:37.670+0000] {logging_mixin.py:190} INFO - Task hostname:11485420fd93 operator:BashOperator
+[2024-11-07T12:36:37.723+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-11-07T12:36:37.747+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
